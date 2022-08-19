@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { FiX, FiMenu } from "react-icons/fi";
 
 function Navbar() {
-  const [visible, setVisible] = useState(false);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
