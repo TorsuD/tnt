@@ -1,0 +1,20 @@
+.footer {
+  height: 130px;
+  color: grey;
+  text-align: center;
+  background-color: black;
+}
+
+.footer__header {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.footer__title {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.footer__year {
+  font-size: 12px;
+}
