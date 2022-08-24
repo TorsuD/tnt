@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import "./Translator.css";
 import { FiMic, FiVolume2 } from "react-icons/fi";
-import {
-  ReactMediaRecorder,
-  useReactMediaRecorder,
-} from "react-media-recorder";
+import { useReactMediaRecorder } from "react-media-recorder";
 
 function Translator() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
-  const { status, clearBlobUrl, startRecording, stopRecording, mediaBlobUrl } =
-    useReactMediaRecorder({ audio: true });
+  const { startRecording, stopRecording, mediaBlobUrl } = useReactMediaRecorder(
+    { audio: true }
+  );
 
   return (
     <div className="translator">

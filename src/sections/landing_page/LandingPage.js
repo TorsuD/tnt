@@ -1,5 +1,5 @@
 import React from "react";
-import smiley from "../../assets/images/smiley.jpg";
+import smiley from "../../assets/images/kente.jpg";
 import "./LandingPage.css";
 
 function LandingPage() {
@@ -14,8 +14,8 @@ function LandingPage() {
           </div>
 
           <div className="landingPage__description">
-            Travel to all your francophone countries <br /> with the comfort of
-            T'n'T
+            Travel to all your francophone countries <br /> and translate your
+            English to French with the comfort of T'n'T
           </div>
         </div>
 

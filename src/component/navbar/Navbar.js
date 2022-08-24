@@ -18,9 +18,6 @@ function Navbar() {
               About T'n'T
             </li>
             <li className="navbar__option" onClick={closeMenu}>
-              Why T'n'T?
-            </li>
-            <li className="navbar__option" onClick={closeMenu}>
               FAQs
             </li>
           </ul>

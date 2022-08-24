@@ -38,11 +38,9 @@ ul {
 .navbar__option {
   margin-right: 10px;
   padding: 10px;
-  border-radius: 20px;
-  letter-spacing: 0.1em;
-  color: var(--tnt-blue);
-  /* border-bottom: 2px solid white; */
-  border-left: 2px solid white;
+  color: blueviolet;
+  font-weight: 500;
+  border-bottom: 2px solid #fff;
 }
 
 .navbar__hamburger {
@@ -53,6 +51,7 @@ ul {
   background-color: rgb(118, 175, 255);
   color: white;
   transition: all 0.4s ease;
+  border-radius: 20px;
 }
 
 .navbar__tnt {
