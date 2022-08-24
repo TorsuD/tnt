@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.translator__container {
+  text-align: center;
+}
+
 #translator__mic {
   padding: 20px;
   background-color: whitesmoke;
@@ -93,4 +97,12 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: #3fb8af;
+}
+
+.translator__clear {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: grey;
+  text-align: center;
+  width: 40px;
 }

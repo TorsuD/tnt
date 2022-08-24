@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./Translator.css";
 import { FiMic, FiVolume2 } from "react-icons/fi";
+import {
+  ReactMediaRecorder,
+  useReactMediaRecorder,
+} from "react-media-recorder";
 
 function Translator() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  const { status, clearBlobUrl, startRecording, stopRecording, mediaBlobUrl } =
+    useReactMediaRecorder({ audio: true });
 
   return (
     <div className="translator">
@@ -12,18 +19,36 @@ function Translator() {
         <div className="translator__input" onClick={handleClick}>
           {click ? (
             <div>
-              <FiMic size={"40px"} id="translator__micPressed" />
+              <FiMic
+                size={"40px"}
+                id="translator__micPressed"
+                onClick={stopRecording}
+              />
             </div>
           ) : (
             <div>
-              <FiMic size={"40px"} id="translator__mic" />
+              <FiMic
+                size={"40px"}
+                id="translator__mic"
+                onClick={startRecording}
+              />
             </div>
           )}
+        </div>
 
+        <div>
           <div className="translator__instruction">
             {click ? "Recording" : "Click Here to Record"}
           </div>
+
+          <div>
+            <audio src={mediaBlobUrl} autoPlay controls clearBlobUrl></audio>
+          </div>
         </div>
+
+        {/* <div className="translator__clear" onClick={clearBlobUrl}>
+          Clear
+        </div> */}
 
         <div className="translator__output">
           {click ? (
@@ -39,7 +64,23 @@ function Translator() {
           <div className="translator__instruction">
             {click ? "Preparing" : "Translated version"}
           </div>
+
+          <div>
+            <audio src={mediaBlobUrl} controls loop></audio>
+          </div>
         </div>
+
+        {/* <div className="translator__status">{status}</div>
+        <div>
+          <button onClick={startRecording}>Start</button>
+        </div>
+
+        <div>
+          <button onClick={stopRecording}>Stop/</button>
+        </div>
+        <div>
+          <audio src={mediaBlobUrl} autoPlay controls loop></audio>
+        </div> */}
       </div>
     </div>
   );
