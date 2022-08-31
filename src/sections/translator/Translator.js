@@ -11,6 +11,14 @@ function Translator() {
     { audio: true }
   );
 
+  // useEffect(() => {
+  //   first
+
+  //   return () => {
+  //     second
+  //   }
+  // }, [third])
+
   return (
     <div className="translator">
       <div className="translator__container">
@@ -43,6 +51,7 @@ function Translator() {
             <audio src={mediaBlobUrl} autoPlay controls clearBlobUrl></audio>
           </div>
         </div>
+        {/**Input Section on top */}
 
         {/* <div className="translator__clear" onClick={clearBlobUrl}>
           Clear
